@@ -1,0 +1,35 @@
+name: Family audit
+
+# Weekly, and on demand: clone every member named in the front page's table, run the standard's program-tier checks
+# on each, and write one table (member, errors, warnings, questions) to the job summary. The job fails only when a
+# member has errors. The map-true check runs in the same job, online, and warns on a State that no longer matches.
+on:
+  schedule:
+    - cron: "17 7 * * 1"   # Mondays
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: repository
+      - uses: actions/checkout@v4
+        with:
+          repository: Tewf/reader-ergonomics
+          ref: b9732b9814c71768f722691f3c5049ec2b8ed378   # v1.19.2 (reader-ergonomics extending.md, Versions)
+          path: standard
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test the audit and the map check
+        run: python3 -m unittest discover -s repository/checks/local
+      - name: Audit the family
+        run: python3 repository/checks/local/family_audit.py --standard standard --readme repository/README.md --summary "$GITHUB_STEP_SUMMARY"
+      - name: Compare each State with GitHub's newest tag
+        if: always()
+        run: python3 standard/checks/run.py repository --online --only map-true --judge none

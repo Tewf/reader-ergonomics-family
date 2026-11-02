@@ -28,3 +28,12 @@ family = ["reader-ergonomics",
           "reader-ergonomics-blueprint",
           "reader-ergonomics-software-design"]
 shared_links = []
+
+# The two local checks, in checks/local/ (found and run by the standard's run.py, as blueprint's topic check is).
+# map-true runs only with --online: each member's newest tag on GitHub against the State column of README.md.
+[map_true]
+timeout_seconds = 10   # PROVISIONAL: the longest wait for one request; the network here may switch while a run is going
+
+# family-audit runs only with FAMILY_AUDIT=1 and --online, from .github/workflows/family-audit.yml: it clones every member.
+[family_audit]
+members = "README.md"   # the file whose State table names the members
