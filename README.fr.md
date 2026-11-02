@@ -10,9 +10,8 @@ et ne dépend d'aucune, donc la carte qui pointe dans les deux sens vit ici.
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-02) :** mis en place ; la carte et l'état des membres, rien de plus. Le premier travail est d'écrire
-> les règles de la famille, tenues jusqu'ici dans les notes du mainteneur, et l'audit de toute la famille comme un
-> programme. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
+> **État (2026-11-02) :** la carte, l'état des membres, les six règles écrites, et deux programmes : un audit
+> hebdomadaire de chaque membre et une vérification que les états ci-dessous suivent les étiquettes de GitHub. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
 >
 > **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
 > reader-ergonomics. Les corrections sont bienvenues sous forme d'issues.
@@ -88,10 +87,11 @@ projet. Le projet y a son pendant, [ai-augmented-project](https://github.com/Tew
 
 ## Le premier travail
 
-Non commencé.
+Fait le 2026-11-02, en première passe : les règles en [pages](rules/), l'audit en [programme](checks/local/family_audit.py)
+lancé chaque semaine par [family-audit.yml](.github/workflows/family-audit.yml), et [la vérification de la carte](checks/local/map_true.py).
 
 1. **Les règles, écrites.** Les six règles ci-dessus sont tenues dans les notes du mainteneur et dans l'`extending.md`
-   de la norme. Ici elles reçoivent une page chacune, avec leur raison et leur histoire, liée depuis les membres.
+   de la norme. Ici elles reçoivent [une page chacune](rules/), avec leur raison et leur histoire, liée depuis les membres.
 2. **L'audit de la famille comme programme.** Le 2026-10-29, chaque propriétaire de genre a audité la famille à la
    main et avec un script par genre. Le travail est un programme qui lance les vérifications de chaque membre sur
    chaque membre et rapporte, pour que l'audit soit répété par la CI plutôt que retenu de mémoire.
@@ -99,6 +99,16 @@ Non commencé.
    comparés à ce que GitHub tient, pour que la page ne vieillisse pas en silence.
 
 ## Vérifier
+
+L'audit de la famille et la vérification de la carte tournent chaque semaine. À la main, depuis ce dépôt :
+
+```sh
+python3 -m unittest discover -s checks/local
+python3 checks/local/family_audit.py --standard chemin/vers/reader-ergonomics
+python3 chemin/vers/reader-ergonomics/checks/run.py . --online --only map-true
+```
+
+Pour vérifier ce dépôt lui-même :
 
 ```sh
 git clone https://github.com/Tewf/reader-ergonomics
@@ -114,6 +124,8 @@ sur master construit aussi le site, [tewf.github.io/reader-ergonomics-family](ht
 
 | Partie | Résumé |
 |---|---|
+| [rules](rules/) | les six règles communes, une page chacune avec sa raison et son histoire |
+| [checks/local](checks/local/) | l'audit de la famille et la vérification de la carte, avec leurs tests |
 | [decisions](decisions/) | une fiche par choix qui façonne ce dépôt, chacune ouvrant sur la décision en une phrase |
 
 ## Licence

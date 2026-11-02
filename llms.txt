@@ -1,12 +1,13 @@
 # reader-ergonomics family
 
-> The front page of the reader-ergonomics family: the standard, its extensions, the topic they build on and the two members that lead out of it, with each member's state and the rules they share. Scope only; the rules are not yet written out.
+> The front page of the reader-ergonomics family: the standard, its extensions, the topic they build on and the two members that lead out of it, with each member's state and the rules they share. The rules are written out, the family audit and the map check are programs.
 
 Each page's markdown source is served at the same path with a .md extension. This index is written by hand; AGENTS.md says to keep it in step.
 
 ## The repository
 
 - [reader-ergonomics family](https://tewf.github.io/reader-ergonomics-family/README.md): the scope, the first job and the questions its review must answer
+- [The rules](https://tewf.github.io/reader-ergonomics-family/rules/README.md): the six shared rules, one page each with its reason and history
 - [Decisions](https://tewf.github.io/reader-ergonomics-family/decisions/README.md): one record per choice that shapes the repository
 
 ## Contributing

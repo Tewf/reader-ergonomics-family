@@ -10,8 +10,8 @@ so the map that points both ways lives here.
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-02):** set up; the map and the members' states, nothing more. The first job is to write down the
-> family's rules, held so far in the maintainer's notes, and the family-wide audit as a program. It is not an official
+> **Status (2026-11-02):** the map, the members' states, the six rules written out, and two programs: a weekly audit of
+> every member and a check that the states below match GitHub's tags. It is not an official
 > standard, not a peer-reviewed study and not a new result.
 >
 > **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
@@ -87,10 +87,11 @@ The project has its counterpart there, [ai-augmented-project](https://github.com
 
 ## The first job
 
-Not started.
+Done on 2026-11-02, as a first pass: the rules as [pages](rules/), the audit as [a program](checks/local/family_audit.py)
+run weekly by [family-audit.yml](.github/workflows/family-audit.yml), and [the map check](checks/local/map_true.py).
 
 1. **The rules, written down.** The six rules above are held in the maintainer's notes and in the standard's
-   `extending.md`; here they get one page each with their reason and their history, linked from the members.
+   `extending.md`; here they get [one page each](rules/) with their reason and their history, linked from the members.
 2. **The family audit as a program.** On 2026-10-29 each genre owner audited the family by hand and with one script
    per genre. The job is one program that runs every member's checks on every member and reports, so the audit is
    repeated by CI rather than remembered.
@@ -98,6 +99,16 @@ Not started.
    holds, so the page cannot go stale in silence.
 
 ## Check it
+
+The family audit and the map check run weekly. By hand, from a checkout of this repository:
+
+```sh
+python3 -m unittest discover -s checks/local
+python3 checks/local/family_audit.py --standard path/to/reader-ergonomics
+python3 path/to/reader-ergonomics/checks/run.py . --online --only map-true
+```
+
+To check this repository itself:
 
 ```sh
 git clone https://github.com/Tewf/reader-ergonomics
@@ -113,6 +124,8 @@ to master also renders the site, [tewf.github.io/reader-ergonomics-family](https
 
 | Part | Summary |
 |---|---|
+| [rules](rules/) | the six shared rules, one page each with its reason and its history |
+| [checks/local](checks/local/) | the family audit and the map check, with their unit tests |
 | [decisions](decisions/) | one record per choice that shapes this repository, each opening with the decision in one sentence |
 
 ## Licence
