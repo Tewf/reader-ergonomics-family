@@ -32,3 +32,45 @@ path = "README.md"
 question = "reads about equally as reference and how-to: one mode per document?"
 file = "36ad41cb5ddf"
 answer = "Reference: the family's front page, read for `The map`, the members' states and `The rules`. `Take it` and `Check it` are short pointers to the commands, not a tutorial."
+
+[[answer]]
+check = "co-change"
+path = ".github/workflows/checks.yml"
+question = "changed together with AGENTS.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "f59d92b17341"
+answer = "Link, do not share a folder: `AGENTS.md` is the contributor's guide to running the same checks by hand, and the workflow runs them on each `push`; they moved together at the release, not by design."
+
+[[answer]]
+check = "co-change"
+path = ".github/workflows/checks.yml"
+question = "changed together with CHANGELOG.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "f59d92b17341"
+answer = "Link, do not share a folder: `CHANGELOG.md` records the pin move, and the workflow runs on each `push`; the changelog is a record that no job reads."
+
+[[answer]]
+check = "co-change"
+path = ".github/workflows/checks.yml"
+question = "changed together with README.fr.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "f59d92b17341"
+answer = "Link, do not share a folder: the workflow checks the documents on each `push`, and `README.fr.md` is the French front page, kept in step with `README.md` by the repository's own rule."
+
+[[answer]]
+check = "co-change"
+path = ".github/workflows/checks.yml"
+question = "changed together with README.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "f59d92b17341"
+answer = "Link, do not share a folder: the workflow reads the front page on each `push`; `README.md` is that page, and the French page follows it."
+
+[[answer]]
+check = "co-change"
+path = "checks/config.toml"
+question = "changed together with decisions/README.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "2e881ab9eb1c"
+answer = "Link, do not share a folder: the config holds the `family_audit` and `map_true` values the local checks read, and `decisions/README.md` links the record of why the audit is a program rather than copying its value."
+
+[[answer]]
+check = "document-mode"
+path = "AGENTS.md"
+question = "reads about equally as reference and how-to: one mode per document?"
+file = "a99830222a77"
+answer = "How-to: a contributor reads this file to act, and `Before handing back` is the step to follow; the rules sections are the reference inside that one act, so one mode holds."
