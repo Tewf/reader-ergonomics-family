@@ -42,7 +42,7 @@ jamais votre copie.
 
 ## La carte
 
-![La norme en bas ; cinq extensions sur elle : academic, presentations, software-design, learning et le topic ; sur le topic, le blueprint et le projet ; le blueprint est le pont vers le hub ai-augmented. Ce hub est au-dessus de tout et rien ne pointe vers lui.](map.svg)
+![La norme en bas ; six extensions sur elle : academic, presentations, software-design, learning, review et le topic ; sur le topic, le blueprint et le projet ; le blueprint est le pont vers le hub ai-augmented. Ce hub est au-dessus de tout et rien ne pointe vers lui.](map.svg)
 
 <details>
 <summary>Source Graphviz</summary>
@@ -60,6 +60,7 @@ digraph map {
   PR [label=<<b>presentations</b><br/><font point-size="11" color="#55575F">talks, figures</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   SD [label=<<b>software-design</b><br/><font point-size="11" color="#55575F">design documents</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   LE [label=<<b>learning</b><br/><font point-size="11" color="#55575F">material to be learned</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  RV [label=<<b>review</b><br/><font point-size="11" color="#55575F">the literature review as a genre</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   T  [label=<<b>topic</b><br/><font point-size="11" color="#55575F">the recursive unit</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   BP [label=<<b>blueprint</b><br/><font point-size="11" color="#55575F">the bridge: reasoning checked</font>>, fillcolor="#FBEDE4", color="#B4541A"];
   P  [label=<<b>project</b><br/><font point-size="11" color="#55575F">one person's project, as topics</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
@@ -70,10 +71,11 @@ digraph map {
   RE -> SD [dir=back, label=" extends"];
   RE -> LE [dir=back, label=" extends"];
   RE -> T [dir=back, label=" extends"];
+  RE -> RV [dir=back, label=" extends"];
   T -> BP [dir=back, label=" builds on"];
   T -> P [dir=back, label=" builds on"];
   BP -> AI [dir=back, style=dashed, label=" the bridge to"];
-  {rank=same; AC; PR; SD; LE; T}
+  {rank=same; AC; PR; SD; LE; T; RV}
   {rank=same; BP; P}
 }
 ```
@@ -87,6 +89,7 @@ digraph map {
 | [reader-ergonomics-presentations](https://github.com/Tewf/reader-ergonomics-presentations) | exposés, et la figure ou le diagramme dans tout document | v1.0.0 |
 | [reader-ergonomics-software-design](https://github.com/Tewf/reader-ergonomics-software-design) | les documents qui conçoivent un logiciel avant le code | v1.0.0 |
 | [reader-ergonomics-learning](https://github.com/Tewf/reader-ergonomics-learning) | le matériel fait pour être appris | v1.0.0 |
+| [reader-ergonomics-review](https://github.com/Tewf/reader-ergonomics-review) | la revue de littérature comme genre : ses étapes, ses fichiers, sa notation grise, son second évaluateur et son flux | périmètre posé le 2026-11-03 ; première revue non commencée |
 | [reader-ergonomics-topic](https://github.com/Tewf/reader-ergonomics-topic) | une unité d'écriture récursive, le topic, et sa vérification | v0.6.1 |
 | [reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint) | le raisonnement en arbre de topics, un vérificateur par partie, Lean d'abord, un modèle qui oriente | B1 en miniature construit : le théorème d'Euclide en topics, Lean vert en CI |
 | [reader-ergonomics-project](https://github.com/Tewf/reader-ergonomics-project) | comment une personne mène un projet, chaque étape un topic | revue faite (38 sources) ; la forme du projet et sa vérification |

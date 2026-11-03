@@ -40,7 +40,7 @@ The page is meant to be copied for a family of your own. Copy it from a tagged r
 
 ## The map
 
-![The standard at the bottom; five extensions on it: academic, presentations, software-design, learning and the topic; on the topic, the blueprint and the project; the blueprint is the bridge to the ai-augmented hub. This hub sits above all and nothing points to it.](map.svg)
+![The standard at the bottom; six extensions on it: academic, presentations, software-design, learning, review and the topic; on the topic, the blueprint and the project; the blueprint is the bridge to the ai-augmented hub. This hub sits above all and nothing points to it.](map.svg)
 
 <details>
 <summary>Graphviz source</summary>
@@ -58,6 +58,7 @@ digraph map {
   PR [label=<<b>presentations</b><br/><font point-size="11" color="#55575F">talks, figures</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   SD [label=<<b>software-design</b><br/><font point-size="11" color="#55575F">design documents</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   LE [label=<<b>learning</b><br/><font point-size="11" color="#55575F">material to be learned</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  RV [label=<<b>review</b><br/><font point-size="11" color="#55575F">the literature review as a genre</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   T  [label=<<b>topic</b><br/><font point-size="11" color="#55575F">the recursive unit</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   BP [label=<<b>blueprint</b><br/><font point-size="11" color="#55575F">the bridge: reasoning checked</font>>, fillcolor="#FBEDE4", color="#B4541A"];
   P  [label=<<b>project</b><br/><font point-size="11" color="#55575F">one person's project, as topics</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
@@ -68,10 +69,11 @@ digraph map {
   RE -> SD [dir=back, label=" extends"];
   RE -> LE [dir=back, label=" extends"];
   RE -> T [dir=back, label=" extends"];
+  RE -> RV [dir=back, label=" extends"];
   T -> BP [dir=back, label=" builds on"];
   T -> P [dir=back, label=" builds on"];
   BP -> AI [dir=back, style=dashed, label=" the bridge to"];
-  {rank=same; AC; PR; SD; LE; T}
+  {rank=same; AC; PR; SD; LE; T; RV}
   {rank=same; BP; P}
 }
 ```
@@ -85,6 +87,7 @@ digraph map {
 | [reader-ergonomics-presentations](https://github.com/Tewf/reader-ergonomics-presentations) | talks, and the figure or diagram in any document | v1.0.0 |
 | [reader-ergonomics-software-design](https://github.com/Tewf/reader-ergonomics-software-design) | the documents that design software before the code | v1.0.0 |
 | [reader-ergonomics-learning](https://github.com/Tewf/reader-ergonomics-learning) | material meant to be learned | v1.0.0 |
+| [reader-ergonomics-review](https://github.com/Tewf/reader-ergonomics-review) | the literature review as a genre: its steps, files, grey scoring, second rater and flow | scope set out 2026-11-03; first review not started |
 | [reader-ergonomics-topic](https://github.com/Tewf/reader-ergonomics-topic) | one recursive unit of writing, the topic, and its check | v0.6.1 |
 | [reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint) | reasoning as a tree of topics, a checker per part, Lean first, a model that guides | B1 in miniature built: Euclid's theorem as topics, Lean green in CI |
 | [reader-ergonomics-project](https://github.com/Tewf/reader-ergonomics-project) | how one person runs a project, each step a topic | review done (38 sources); the project shape and its check |
