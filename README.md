@@ -10,12 +10,33 @@ so the map that points both ways lives here.
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-02):** the map, the members' states, the six rules written out, and two programs: a weekly audit of
+> **Status (2026-11-03):** version 0.1.0: the map, the members' states, the six rules written out, and two programs: a weekly audit of
 > every member and a check that the states below match GitHub's tags. It is not an official
 > standard, not a peer-reviewed study and not a new result.
 >
 > **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
 > reader-ergonomics was made. Corrections are welcome as issues.
+
+## Take it
+
+The page is meant to be copied for a family of your own. Copy it from a tagged release
+([tags](https://github.com/Tewf/reader-ergonomics-family/tags)), so a later change here never changes your copy.
+
+1. Copy [README.md](README.md) as your map, the [rules/](rules/) you keep, and [checks/local/](checks/local/), the two
+   checks and their tests, into the same paths of your repository.
+2. Replace the member table and the map with your members; keep one State column that names each member's newest tag.
+3. Add `checks/config.toml` with `extends = "reader-ergonomics"`, as [this one](checks/config.toml) does, and list your
+   members under `[family_audit]` and `[bibliography_keys]`.
+4. Pin the standard by commit in every workflow, as [checks.yml](.github/workflows/checks.yml) does, and run it:
+
+   ```sh
+   git clone https://github.com/Tewf/reader-ergonomics
+   git -C reader-ergonomics checkout b9732b9814c71768f722691f3c5049ec2b8ed378
+   python3 reader-ergonomics/checks/run.py path/to/your/repository
+   ```
+
+5. How to take your own version, and where a disagreement goes: the standard's
+   [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/README.md#take-your-own-version).
 
 ## The map
 

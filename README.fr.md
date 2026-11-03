@@ -10,11 +10,35 @@ et ne dépend d'aucune, donc la carte qui pointe dans les deux sens vit ici.
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-02) :** la carte, l'état des membres, les six règles écrites, et deux programmes : un audit
+> **État (2026-11-03) :** version 0.1.0 : la carte, l'état des membres, les six règles écrites, et deux programmes : un audit
 > hebdomadaire de chaque membre et une vérification que les états ci-dessous suivent les étiquettes de GitHub. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
 >
 > **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
 > reader-ergonomics. Les corrections sont bienvenues sous forme d'issues.
+
+## La prendre
+
+La page est faite pour être copiée, pour une famille à vous. Copiez-la depuis une version étiquetée
+([étiquettes](https://github.com/Tewf/reader-ergonomics-family/tags)), pour qu'un changement ultérieur ici ne change
+jamais votre copie.
+
+1. Copiez [README.md](README.md) comme carte, les [rules/](rules/) que vous gardez et [checks/local/](checks/local/),
+   les deux vérifications et leurs tests, aux mêmes chemins de votre dépôt.
+2. Remplacez le tableau des membres et la carte par vos membres ; gardez une colonne État qui nomme l'étiquette la plus
+   récente de chaque membre.
+3. Ajoutez `checks/config.toml` avec `extends = "reader-ergonomics"`, comme [celui-ci](checks/config.toml), et listez
+   vos membres sous `[family_audit]` et `[bibliography_keys]`.
+4. Épinglez la norme par son commit dans chaque workflow, comme [checks.yml](.github/workflows/checks.yml), puis lancez :
+
+   ```sh
+   git clone https://github.com/Tewf/reader-ergonomics
+   git -C reader-ergonomics checkout b9732b9814c71768f722691f3c5049ec2b8ed378
+   python3 reader-ergonomics/checks/run.py chemin/vers/votre/depot
+   ```
+
+5. Comment prendre votre propre version, et où va un désaccord : la section
+   [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/README.md#take-your-own-version)
+   de la norme.
 
 ## La carte
 
