@@ -13,7 +13,7 @@ stylesheets = []
 [sufficient_contrast]
 stylesheets = []
 
-# The headings the standard's decision-record shape requires (reader-ergonomics v1.20.0, shapes/decision-record.md).
+# The headings the standard's decision-record shape requires (reader-ergonomics v1.21.0, shapes/decision-record.md).
 [shape_conformance]
 shapes = [{ name = "decision record", files = ["decisions/0*.md"], required = ["Context", "Decision", "Consequences", "See also"] }]
 
@@ -26,7 +26,8 @@ optional = []
 family = ["reader-ergonomics",
           "reader-ergonomics-topic",
           "reader-ergonomics-blueprint",
-          "reader-ergonomics-software-design"]
+          "reader-ergonomics-software-design",
+          "reader-ergonomics-review"]
 shared_links = []
 
 # The two local checks, in checks/local/ (found and run by the standard's run.py, as blueprint's topic check is).
