@@ -64,8 +64,8 @@ digraph map {
 | [reader-ergonomics-software-design](https://github.com/Tewf/reader-ergonomics-software-design) | les documents qui conçoivent un logiciel avant le code | v1.0.0 |
 | [reader-ergonomics-learning](https://github.com/Tewf/reader-ergonomics-learning) | le matériel fait pour être appris | v1.0.0 |
 | [reader-ergonomics-topic](https://github.com/Tewf/reader-ergonomics-topic) | une unité d'écriture récursive, le topic, et sa vérification | v0.6.1 |
-| [reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint) | le raisonnement en arbre de topics, un vérificateur par partie, Lean d'abord, un modèle qui oriente | revue faite, rien de construit |
-| [reader-ergonomics-project](https://github.com/Tewf/reader-ergonomics-project) | comment une personne mène un projet, chaque étape un topic | périmètre seul |
+| [reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint) | le raisonnement en arbre de topics, un vérificateur par partie, Lean d'abord, un modèle qui oriente | B1 en miniature construit : le théorème d'Euclide en topics, Lean vert en CI |
+| [reader-ergonomics-project](https://github.com/Tewf/reader-ergonomics-project) | comment une personne mène un projet, chaque étape un topic | revue faite (38 sources) ; la forme du projet et sa vérification |
 
 Les deux derniers membres sortent de cette famille. Le blueprint est le pont vers la
 [famille AI-augmented](https://github.com/Tewf/ai-augmented), où une personne, un modèle et une machine partagent un

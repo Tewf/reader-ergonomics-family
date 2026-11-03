@@ -65,8 +65,8 @@ digraph map {
 | [reader-ergonomics-software-design](https://github.com/Tewf/reader-ergonomics-software-design) | the documents that design software before the code | v1.0.0 |
 | [reader-ergonomics-learning](https://github.com/Tewf/reader-ergonomics-learning) | material meant to be learned | v1.0.0 |
 | [reader-ergonomics-topic](https://github.com/Tewf/reader-ergonomics-topic) | one recursive unit of writing, the topic, and its check | v0.6.1 |
-| [reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint) | reasoning as a tree of topics, a checker per part, Lean first, a model that guides | review done, nothing built |
-| [reader-ergonomics-project](https://github.com/Tewf/reader-ergonomics-project) | how one person runs a project, each step a topic | scope only |
+| [reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint) | reasoning as a tree of topics, a checker per part, Lean first, a model that guides | B1 in miniature built: Euclid's theorem as topics, Lean green in CI |
+| [reader-ergonomics-project](https://github.com/Tewf/reader-ergonomics-project) | how one person runs a project, each step a topic | review done (38 sources); the project shape and its check |
 
 The two last members lead out of this family. The blueprint is the bridge to the
 [AI-augmented family](https://github.com/Tewf/ai-augmented), where a person, a model and a machine share one project.
