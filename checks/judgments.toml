@@ -16,19 +16,19 @@ answer = "It stays: `decisions` is the folder the decision-record shape names fo
 check = "document-mode"
 path = "README.md"
 question = "reads about equally as reference and how-to: one mode per document?"
-file = "534d11a3c7b2"
+file = "36ad41cb5ddf"
 answer = "Reference: the family's front page, read for `The map`, the members' states and `The rules`, then `The first job`. Its one task, `Check it`, is two commands for whoever wants to run the checks."
 
 [[answer]]
 check = "document-mode"
 path = "README.md"
 question = "reads about equally as reference and how-to: one mode per document?"
-file = "14e6a2908cf8"
+file = "36ad41cb5ddf"
 answer = "One mode: reference. It is a front page that holds `The map` and `The rules`; the commands under `Check it` are a short pointer to how to run the checks, not a tutorial."
 
 [[answer]]
 check = "document-mode"
 path = "README.md"
 question = "reads about equally as reference and how-to: one mode per document?"
-file = "5456fbaa43a9"
+file = "36ad41cb5ddf"
 answer = "Reference: the family's front page, read for `The map`, the members' states and `The rules`. `Take it` and `Check it` are short pointers to the commands, not a tutorial."
