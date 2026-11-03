@@ -12,7 +12,7 @@
 
 ## History
 
-- 2026-10-29: the interface was published in [extending.md](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/extending.md): a local check defines `NAME` and `check(root, config)`.
+- 2026-10-29: the interface was published in [extending.md](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/extending.md): a local check defines `NAME` and `check(root, config)`.
 - 2026-10-29: `figure-width` was proposed by the presentations extension and adopted in v1.4.0.
 - 2026-10-29: `judgment-quotes` was merged from two extensions' local checks in v1.2.0.
 - 2026-11-02: the family audit and the map check, in [checks/local/](../checks/local/), run this rule on the whole family each week.

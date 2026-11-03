@@ -32,12 +32,12 @@ jamais votre copie.
 
    ```sh
    git clone https://github.com/Tewf/reader-ergonomics
-   git -C reader-ergonomics checkout b9732b9814c71768f722691f3c5049ec2b8ed378
+   git -C reader-ergonomics checkout 4f99372093729dacf982e9174e94f6b8793c513d
    python3 reader-ergonomics/checks/run.py chemin/vers/votre/depot
    ```
 
 5. Comment prendre votre propre version, et où va un désaccord : la section
-   [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/README.md#take-your-own-version)
+   [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/README.md#take-your-own-version)
    de la norme.
 
 ## La carte
@@ -45,7 +45,7 @@ jamais votre copie.
 ![La norme en bas ; cinq extensions sur elle : academic, presentations, software-design, learning et le topic ; sur le topic, le blueprint et le projet ; le blueprint est le pont vers le hub ai-augmented. Ce hub est au-dessus de tout et rien ne pointe vers lui.](map.svg)
 
 <details>
-<summary>Graphviz source</summary>
+<summary>Source Graphviz</summary>
 
 ```dot
 // The map of the reader-ergonomics family. Colours: the family blue, the sibling family green, the bridge orange,
@@ -55,7 +55,7 @@ digraph map {
   node  [shape=box, style="rounded,filled", fontname="Inter", fontsize=13, margin="0.2,0.1", penwidth=1.5, fontcolor="#1F2328"];
   edge  [fontname="Inter", fontsize=11, color="#3D434B", fontcolor="#55575F", penwidth=1.3, arrowsize=0.8];
   HUB [label=<<b>reader-ergonomics-family</b><br/><font point-size="11" color="#55575F">the hub: map, states, rules</font>>, fillcolor="#E8EEF8", color="#2F5DA8", penwidth=2.6];
-  RE [label=<<b>reader-ergonomics</b><br/><font point-size="11" color="#55575F">the standard, v1.19.2</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  RE [label=<<b>reader-ergonomics</b><br/><font point-size="11" color="#55575F">the standard, v1.20.0</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   AC [label=<<b>academic</b><br/><font point-size="11" color="#55575F">reports, papers, proofs</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   PR [label=<<b>presentations</b><br/><font point-size="11" color="#55575F">talks, figures</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   SD [label=<<b>software-design</b><br/><font point-size="11" color="#55575F">design documents</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
@@ -82,7 +82,7 @@ digraph map {
 
 | Membre | Problème | État |
 |---|---|---|
-| [reader-ergonomics](https://github.com/Tewf/reader-ergonomics) | la norme : des principes gradés par leur preuve, des formes à remplir, des vérifications à lancer sur tout texte | v1.19.2, déclarée finie |
+| [reader-ergonomics](https://github.com/Tewf/reader-ergonomics) | la norme : des principes gradés par leur preuve, des formes à remplir, des vérifications à lancer sur tout texte | v1.20.0, déclarée finie |
 | [reader-ergonomics-academic](https://github.com/Tewf/reader-ergonomics-academic) | rapports, articles de recherche, articles mathématiques et preuves | v1.0.0 |
 | [reader-ergonomics-presentations](https://github.com/Tewf/reader-ergonomics-presentations) | exposés, et la figure ou le diagramme dans tout document | v1.0.0 |
 | [reader-ergonomics-software-design](https://github.com/Tewf/reader-ergonomics-software-design) | les documents qui conçoivent un logiciel avant le code | v1.0.0 |
@@ -99,7 +99,7 @@ projet. Le projet y a son pendant, [ai-augmented-project](https://github.com/Tew
 
 - **La norme ne dépend d'aucune extension.** Une extension lie les principes et les formes de la norme à une version,
   épinglée par commit dans chaque workflow, et ne les copie jamais. La norme peut lister une extension, jamais la lire
-  ([extending.md](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/extending.md)).
+  ([extending.md](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/extending.md)).
 - **Un genre par extension**, et seulement ce que le genre change : un principe que la norme tient déjà est lié.
 - **Chaque membre exécute les vérifications de la norme en CI**, et les siennes dans `checks/local/`. Une
   vérification écrite par une extension est proposée à la norme une fois qu'elle tient sur la famille. Chaque

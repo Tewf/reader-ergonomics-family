@@ -14,7 +14,7 @@
 
 - 2026-10-29: two sites loaded a stylesheet seven releases old because only `checks.yml` was raised.
 - 2026-10-29: `standard-pin` was added in v1.12.0 and `standard-links` in v1.13.0.
-- v1.17.0: the changelog, `changelog-pin` and rule 5 of the [decision record shape](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/shapes/decision-record.md) were added.
+- v1.17.0: the changelog, `changelog-pin` and rule 5 of the [decision record shape](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/shapes/decision-record.md) were added.
 - Past pin records stay, since `decision-records` forbids gaps.
 
 ## See also
