@@ -3,6 +3,16 @@
 The releases this repository pins, newest first, in the form of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 A pin move is recorded here, not in decisions/.
 
+## [0.1.2] - 2026-11-07
+
+### Changed
+
+- Pinned reader-ergonomics v1.21.1 (`a67087a`), from v1.21.0 (`2e5b6f0`): the sentence checks skip front matter.
+
+### Fixed
+
+- The members' states name their current releases: the standard v1.21.1, academic and presentations v1.0.1, software-design and learning v1.1.0 with their sixth shapes, review v0.1.0, blueprint v0.1.1, project v0.1.2 with its 40 sources. The status line names the current release.
+
 ## [0.1.1] - 2026-11-04
 
 ### Changed

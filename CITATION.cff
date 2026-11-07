@@ -8,8 +8,8 @@ title: "reader-ergonomics-family (work in progress)"
 abstract: >-
   The front page of the reader-ergonomics family: the standard, its extensions, the topic they build on and the two members that lead out of it, with each member's state and the rules they share. The rules are written out, and two programs audit the members and keep the map true.
 type: software
-version: 0.1.1
-date-released: 2026-11-04
+version: 0.1.2
+date-released: 2026-11-07
 authors:
   - name: "Tewf"
 repository-code: "https://github.com/Tewf/reader-ergonomics-family"

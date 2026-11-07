@@ -10,7 +10,7 @@ et ne dépend d'aucune, donc la carte qui pointe dans les deux sens vit ici.
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-03) :** version 0.1.0 : la carte, l'état des membres, les six règles écrites, et deux programmes : un audit
+> **État (2026-11-07) :** version 0.1.2 : la carte, l'état des membres, les six règles écrites, et deux programmes : un audit
 > hebdomadaire de chaque membre et une vérification que les états ci-dessous suivent les étiquettes de GitHub. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
 >
 > **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
@@ -32,12 +32,12 @@ jamais votre copie.
 
    ```sh
    git clone https://github.com/Tewf/reader-ergonomics
-   git -C reader-ergonomics checkout 2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a
+   git -C reader-ergonomics checkout a67087a2cf4c9a552b6ec4bd96e90bec838e8859
    python3 reader-ergonomics/checks/run.py chemin/vers/votre/depot
    ```
 
 5. Comment prendre votre propre version, et où va un désaccord : la section
-   [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/README.md#take-your-own-version)
+   [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/a67087a2cf4c9a552b6ec4bd96e90bec838e8859/README.md#take-your-own-version)
    de la norme.
 
 ## La carte
@@ -55,7 +55,7 @@ digraph map {
   node  [shape=box, style="rounded,filled", fontname="Inter", fontsize=13, margin="0.2,0.1", penwidth=1.5, fontcolor="#1F2328"];
   edge  [fontname="Inter", fontsize=11, color="#3D434B", fontcolor="#55575F", penwidth=1.3, arrowsize=0.8];
   HUB [label=<<b>reader-ergonomics-family</b><br/><font point-size="11" color="#55575F">the hub: map, states, rules</font>>, fillcolor="#E8EEF8", color="#2F5DA8", penwidth=2.6];
-  RE [label=<<b>reader-ergonomics</b><br/><font point-size="11" color="#55575F">the standard, v1.21.0</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  RE [label=<<b>reader-ergonomics</b><br/><font point-size="11" color="#55575F">the standard, v1.21.1</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   AC [label=<<b>academic</b><br/><font point-size="11" color="#55575F">reports, papers, proofs</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   PR [label=<<b>presentations</b><br/><font point-size="11" color="#55575F">talks, figures</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   SD [label=<<b>software-design</b><br/><font point-size="11" color="#55575F">design documents</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
@@ -84,15 +84,15 @@ digraph map {
 
 | Membre | Problème | État |
 |---|---|---|
-| [reader-ergonomics](https://github.com/Tewf/reader-ergonomics) | la norme : des principes gradés par leur preuve, des formes à remplir, des vérifications à lancer sur tout texte | v1.21.0, déclarée finie |
-| [reader-ergonomics-academic](https://github.com/Tewf/reader-ergonomics-academic) | rapports, articles de recherche, articles mathématiques et preuves | v1.0.0 |
-| [reader-ergonomics-presentations](https://github.com/Tewf/reader-ergonomics-presentations) | exposés, et la figure ou le diagramme dans tout document | v1.0.0 |
-| [reader-ergonomics-software-design](https://github.com/Tewf/reader-ergonomics-software-design) | les documents qui conçoivent un logiciel avant le code | v1.0.0 |
-| [reader-ergonomics-learning](https://github.com/Tewf/reader-ergonomics-learning) | le matériel fait pour être appris | v1.0.0 |
-| [reader-ergonomics-review](https://github.com/Tewf/reader-ergonomics-review) | la revue de littérature comme genre : ses étapes, ses fichiers, sa notation grise, son second évaluateur et son flux | périmètre posé le 2026-11-03 ; première revue non commencée |
+| [reader-ergonomics](https://github.com/Tewf/reader-ergonomics) | la norme : des principes gradés par leur preuve, des formes à remplir, des vérifications à lancer sur tout texte | v1.21.1, déclarée finie |
+| [reader-ergonomics-academic](https://github.com/Tewf/reader-ergonomics-academic) | rapports, articles de recherche, articles mathématiques et preuves | v1.0.1 |
+| [reader-ergonomics-presentations](https://github.com/Tewf/reader-ergonomics-presentations) | exposés, et la figure ou le diagramme dans tout document | v1.0.1 |
+| [reader-ergonomics-software-design](https://github.com/Tewf/reader-ergonomics-software-design) | les documents qui conçoivent un logiciel avant le code | v1.1.0, six formes : la spécification de modèle s'y ajoute |
+| [reader-ergonomics-learning](https://github.com/Tewf/reader-ergonomics-learning) | le matériel fait pour être appris | v1.1.0, six gabarits : le guide de reconnaissance s'y ajoute |
+| [reader-ergonomics-review](https://github.com/Tewf/reader-ergonomics-review) | la revue de littérature comme genre : ses étapes, ses fichiers, sa notation grise, son second évaluateur et son flux | v0.1.0 : une première passe écrite, neuf gabarits, cinq vérifications, une fiche, une revue des preuves du genre (25 sources) |
 | [reader-ergonomics-topic](https://github.com/Tewf/reader-ergonomics-topic) | une unité d'écriture récursive, le topic, et sa vérification | v0.6.1 |
-| [reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint) | le raisonnement en arbre de topics, un vérificateur par partie, Lean d'abord, un modèle qui oriente | B1 en miniature construit : le théorème d'Euclide en topics, Lean vert en CI |
-| [reader-ergonomics-project](https://github.com/Tewf/reader-ergonomics-project) | comment une personne mène un projet, chaque étape un topic | revue faite (38 sources) ; la forme du projet et sa vérification |
+| [reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint) | le raisonnement en arbre de topics, un vérificateur par partie, Lean d'abord, un modèle qui oriente | v0.1.1 : B1 en miniature construit, le théorème d'Euclide en topics, Lean vert en CI |
+| [reader-ergonomics-project](https://github.com/Tewf/reader-ergonomics-project) | comment une personne mène un projet, chaque étape un topic | v0.1.2 : revue faite (40 sources) ; la forme projet et sa vérification |
 
 Les deux derniers membres sortent de cette famille. Le blueprint est le pont vers la
 [famille AI-augmented](https://github.com/Tewf/ai-augmented), où une personne, un modèle et une machine partagent un
@@ -102,7 +102,7 @@ projet. Le projet y a son pendant, [ai-augmented-project](https://github.com/Tew
 
 - **La norme ne dépend d'aucune extension.** Une extension lie les principes et les formes de la norme à une version,
   épinglée par commit dans chaque workflow, et ne les copie jamais. La norme peut lister une extension, jamais la lire
-  ([extending.md](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/extending.md)).
+  ([extending.md](https://github.com/Tewf/reader-ergonomics/blob/a67087a2cf4c9a552b6ec4bd96e90bec838e8859/extending.md)).
 - **Un genre par extension**, et seulement ce que le genre change : un principe que la norme tient déjà est lié.
 - **Chaque membre exécute les vérifications de la norme en CI**, et les siennes dans `checks/local/`. Une
   vérification écrite par une extension est proposée à la norme une fois qu'elle tient sur la famille. Chaque

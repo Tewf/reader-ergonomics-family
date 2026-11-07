@@ -3,7 +3,7 @@
 **Decision:** The map, the states and the shared rules of the reader-ergonomics family is one problem, so it gets one public repository, set up with its
 scope and nothing more.
 
-**Status:** accepted, 2026-11-02. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/shapes/decision-record.md).
+**Status:** accepted, 2026-11-02. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/a67087a2cf4c9a552b6ec4bd96e90bec838e8859/shapes/decision-record.md).
 
 ## Context
 

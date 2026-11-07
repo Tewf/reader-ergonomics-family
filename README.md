@@ -10,7 +10,7 @@ so the map that points both ways lives here.
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-03):** version 0.1.0: the map, the members' states, the six rules written out, and two programs: a weekly audit of
+> **Status (2026-11-07):** version 0.1.2: the map, the members' states, the six rules written out, and two programs: a weekly audit of
 > every member and a check that the states below match GitHub's tags. It is not an official
 > standard, not a peer-reviewed study and not a new result.
 >
@@ -31,12 +31,12 @@ The page is meant to be copied for a family of your own. Copy it from a tagged r
 
    ```sh
    git clone https://github.com/Tewf/reader-ergonomics
-   git -C reader-ergonomics checkout 2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a
+   git -C reader-ergonomics checkout a67087a2cf4c9a552b6ec4bd96e90bec838e8859
    python3 reader-ergonomics/checks/run.py path/to/your/repository
    ```
 
 5. How to take your own version, and where a disagreement goes: the standard's
-   [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/README.md#take-your-own-version).
+   [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/a67087a2cf4c9a552b6ec4bd96e90bec838e8859/README.md#take-your-own-version).
 
 ## The map
 
@@ -53,7 +53,7 @@ digraph map {
   node  [shape=box, style="rounded,filled", fontname="Inter", fontsize=13, margin="0.2,0.1", penwidth=1.5, fontcolor="#1F2328"];
   edge  [fontname="Inter", fontsize=11, color="#3D434B", fontcolor="#55575F", penwidth=1.3, arrowsize=0.8];
   HUB [label=<<b>reader-ergonomics-family</b><br/><font point-size="11" color="#55575F">the hub: map, states, rules</font>>, fillcolor="#E8EEF8", color="#2F5DA8", penwidth=2.6];
-  RE [label=<<b>reader-ergonomics</b><br/><font point-size="11" color="#55575F">the standard, v1.21.0</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  RE [label=<<b>reader-ergonomics</b><br/><font point-size="11" color="#55575F">the standard, v1.21.1</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   AC [label=<<b>academic</b><br/><font point-size="11" color="#55575F">reports, papers, proofs</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   PR [label=<<b>presentations</b><br/><font point-size="11" color="#55575F">talks, figures</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   SD [label=<<b>software-design</b><br/><font point-size="11" color="#55575F">design documents</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
@@ -82,15 +82,15 @@ digraph map {
 
 | Member | Problem | State |
 |---|---|---|
-| [reader-ergonomics](https://github.com/Tewf/reader-ergonomics) | the standard: principles graded by their evidence, shapes to fill, checks to run on any text | v1.21.0, declared done |
-| [reader-ergonomics-academic](https://github.com/Tewf/reader-ergonomics-academic) | reports, research papers, mathematical articles and proofs | v1.0.0 |
-| [reader-ergonomics-presentations](https://github.com/Tewf/reader-ergonomics-presentations) | talks, and the figure or diagram in any document | v1.0.0 |
-| [reader-ergonomics-software-design](https://github.com/Tewf/reader-ergonomics-software-design) | the documents that design software before the code | v1.0.0 |
-| [reader-ergonomics-learning](https://github.com/Tewf/reader-ergonomics-learning) | material meant to be learned | v1.0.0 |
-| [reader-ergonomics-review](https://github.com/Tewf/reader-ergonomics-review) | the literature review as a genre: its steps, files, grey scoring, second rater and flow | scope set out 2026-11-03; first review not started |
+| [reader-ergonomics](https://github.com/Tewf/reader-ergonomics) | the standard: principles graded by their evidence, shapes to fill, checks to run on any text | v1.21.1, declared done |
+| [reader-ergonomics-academic](https://github.com/Tewf/reader-ergonomics-academic) | reports, research papers, mathematical articles and proofs | v1.0.1 |
+| [reader-ergonomics-presentations](https://github.com/Tewf/reader-ergonomics-presentations) | talks, and the figure or diagram in any document | v1.0.1 |
+| [reader-ergonomics-software-design](https://github.com/Tewf/reader-ergonomics-software-design) | the documents that design software before the code | v1.1.0, six shapes: the model specification joined |
+| [reader-ergonomics-learning](https://github.com/Tewf/reader-ergonomics-learning) | material meant to be learned | v1.1.0, six shapes: the recognition guide joined |
+| [reader-ergonomics-review](https://github.com/Tewf/reader-ergonomics-review) | the literature review as a genre: its steps, files, grey scoring, second rater and flow | v0.1.0: a first pass written, nine shapes, five checks, a card, a review of the genre's own evidence (25 sources) |
 | [reader-ergonomics-topic](https://github.com/Tewf/reader-ergonomics-topic) | one recursive unit of writing, the topic, and its check | v0.6.1 |
-| [reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint) | reasoning as a tree of topics, a checker per part, Lean first, a model that guides | B1 in miniature built: Euclid's theorem as topics, Lean green in CI |
-| [reader-ergonomics-project](https://github.com/Tewf/reader-ergonomics-project) | how one person runs a project, each step a topic | review done (38 sources); the project shape and its check |
+| [reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint) | reasoning as a tree of topics, a checker per part, Lean first, a model that guides | v0.1.1: B1 in miniature built, Euclid's theorem as topics, Lean green in CI |
+| [reader-ergonomics-project](https://github.com/Tewf/reader-ergonomics-project) | how one person runs a project, each step a topic | v0.1.2: review done (40 sources); the project shape and its check |
 
 The two last members lead out of this family. The blueprint is the bridge to the
 [AI-augmented family](https://github.com/Tewf/ai-augmented), where a person, a model and a machine share one project.
@@ -100,7 +100,7 @@ The project has its counterpart there, [ai-augmented-project](https://github.com
 
 - **The standard depends on no extension.** An extension links the standard's principles and shapes at one release,
   pinned by commit in every workflow, and never copies them. The standard may list an extension, never read it
-  ([extending.md](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/extending.md)).
+  ([extending.md](https://github.com/Tewf/reader-ergonomics/blob/a67087a2cf4c9a552b6ec4bd96e90bec838e8859/extending.md)).
 - **One genre per extension**, and only what the genre changes: a principle the standard already holds is linked.
 - **Every member runs the standard's checks in CI**, and its own in `checks/local/`. A check an extension writes is
   proposed to the standard once it holds on the family. Every member then runs it from its next pin raise.
