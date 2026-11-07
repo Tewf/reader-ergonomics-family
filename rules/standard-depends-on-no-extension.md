@@ -12,8 +12,8 @@
 
 ## History
 
-- 2026-10-29: decided as [decision 0001](https://github.com/Tewf/reader-ergonomics/blob/a67087a2cf4c9a552b6ec4bd96e90bec838e8859/decisions/0001-extensions-depend-one-way.md), released in v1.1.0.
-- The contract page ([extending.md](https://github.com/Tewf/reader-ergonomics/blob/a67087a2cf4c9a552b6ec4bd96e90bec838e8859/extending.md)) lists the extensions and says the standard never reads them.
+- 2026-10-29: decided as [decision 0001](https://github.com/Tewf/reader-ergonomics/blob/0206e6950b4feca4194af419384c217863b7c42e/decisions/0001-extensions-depend-one-way.md), released in v1.1.0.
+- The contract page ([extending.md](https://github.com/Tewf/reader-ergonomics/blob/0206e6950b4feca4194af419384c217863b7c42e/extending.md)) lists the extensions and says the standard never reads them.
 - Before that, version 1.0.1 listed the extensions on a page that said the standard never linked to them.
 
 ## See also

@@ -3,6 +3,12 @@
 The releases this repository pins, newest first, in the form of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 A pin move is recorded here, not in decisions/.
 
+## [0.1.3] - 2026-11-07
+
+### Changed
+
+- Pinned reader-ergonomics v1.22.1 (`0206e69`), from v1.21.1 (`a67087a`): LaTeX maths blanked by the sentence checks, escaped-pipe wikilinks resolved, and `standard-pin` moves a pin.
+
 ## [0.1.2] - 2026-11-07
 
 ### Changed

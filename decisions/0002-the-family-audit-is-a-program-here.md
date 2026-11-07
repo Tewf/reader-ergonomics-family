@@ -3,7 +3,7 @@
 **Decision:** the audit of every member is a local check here, run weekly by a workflow, and not a check of the
 standard.
 
-**Status:** accepted, 2026-11-02. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/a67087a2cf4c9a552b6ec4bd96e90bec838e8859/shapes/decision-record.md).
+**Status:** accepted, 2026-11-02. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/0206e6950b4feca4194af419384c217863b7c42e/shapes/decision-record.md).
 
 ## Context
 
