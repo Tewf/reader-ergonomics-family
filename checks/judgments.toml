@@ -1200,70 +1200,70 @@ check = "co-change"
 path = "decisions/0002-the-family-audit-is-a-program-here.md"
 question = "changed together with map.dot in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "3792e9c6aa3f"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `The family audit is a program in this repository` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
 path = "decisions/0002-the-family-audit-is-a-program-here.md"
 question = "changed together with map.svg in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "3792e9c6aa3f"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `The family audit is a program in this repository` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
 path = "decisions/0002-the-family-audit-is-a-program-here.md"
 question = "changed together with rules/a-pin-raise-is-a-changelog-line.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "3792e9c6aa3f"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `The family audit is a program in this repository` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
 path = "decisions/0002-the-family-audit-is-a-program-here.md"
 question = "changed together with rules/every-member-runs-the-checks.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "3792e9c6aa3f"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `The family audit is a program in this repository` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
 path = "decisions/0002-the-family-audit-is-a-program-here.md"
 question = "changed together with rules/standard-depends-on-no-extension.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "3792e9c6aa3f"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `The family audit is a program in this repository` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
 path = "decisions/0003-a-stale-state-is-a-warning.md"
 question = "changed together with map.dot in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "1952b162aefe"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `A stale State is a warning, not an error` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
 path = "decisions/0003-a-stale-state-is-a-warning.md"
 question = "changed together with map.svg in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "1952b162aefe"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `A stale State is a warning, not an error` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
 path = "decisions/0003-a-stale-state-is-a-warning.md"
 question = "changed together with rules/a-pin-raise-is-a-changelog-line.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "1952b162aefe"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `A stale State is a warning, not an error` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
 path = "decisions/0003-a-stale-state-is-a-warning.md"
 question = "changed together with rules/every-member-runs-the-checks.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "1952b162aefe"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `A stale State is a warning, not an error` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
 path = "decisions/0003-a-stale-state-is-a-warning.md"
 question = "changed together with rules/standard-depends-on-no-extension.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "1952b162aefe"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `A stale State is a warning, not an error` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
@@ -1305,39 +1305,39 @@ check = "co-change"
 path = "map.dot"
 question = "changed together with rules/a-pin-raise-is-a-changelog-line.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "cd49ca21d88e"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `HUB` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
 path = "map.dot"
 question = "changed together with rules/every-member-runs-the-checks.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "cd49ca21d88e"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `HUB` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
 path = "map.dot"
 question = "changed together with rules/standard-depends-on-no-extension.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "cd49ca21d88e"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `HUB` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
 path = "map.svg"
 question = "changed together with rules/a-pin-raise-is-a-changelog-line.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "8351de7a4119"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `source-sha256` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
 path = "map.svg"
 question = "changed together with rules/every-member-runs-the-checks.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "8351de7a4119"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `source-sha256` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
 
 [[answer]]
 check = "co-change"
 path = "map.svg"
 question = "changed together with rules/standard-depends-on-no-extension.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "8351de7a4119"
-answer = "No: a pin move touches every file that names the release, the workflows, the pages, the figure and the changelog, on purpose and in one commit (extending.md, Versions); each keeps its folder by role."
+answer = "No: `source-sha256` moves with the files it changed with on a pin raise or a release, on purpose and in one commit, as the family rule a-pin-raise-is-a-changelog-line asks; each keeps its folder by role."
