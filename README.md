@@ -31,12 +31,12 @@ The page is meant to be copied for a family of your own. Copy it from a tagged r
 
    ```sh
    git clone https://github.com/Tewf/reader-ergonomics
-   git -C reader-ergonomics checkout 0206e6950b4feca4194af419384c217863b7c42e
+   git -C reader-ergonomics checkout 65e42472e2d4cbfd994c2a86e95a47e5dc7301ca
    python3 reader-ergonomics/checks/run.py path/to/your/repository
    ```
 
 5. How to take your own version, and where a disagreement goes: the standard's
-   [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/0206e6950b4feca4194af419384c217863b7c42e/README.md#take-your-own-version).
+   [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/65e42472e2d4cbfd994c2a86e95a47e5dc7301ca/README.md#take-your-own-version).
 
 ## The map
 
@@ -53,7 +53,7 @@ digraph map {
   node  [shape=box, style="rounded,filled", fontname="Inter", fontsize=13, margin="0.2,0.1", penwidth=1.5, fontcolor="#1F2328"];
   edge  [fontname="Inter", fontsize=11, color="#3D434B", fontcolor="#55575F", penwidth=1.3, arrowsize=0.8];
   HUB [label=<<b>reader-ergonomics-family</b><br/><font point-size="11" color="#55575F">the hub: map, states, rules</font>>, fillcolor="#E8EEF8", color="#2F5DA8", penwidth=2.6];
-  RE [label=<<b>reader-ergonomics</b><br/><font point-size="11" color="#55575F">the standard, v1.22.1</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  RE [label=<<b>reader-ergonomics</b><br/><font point-size="11" color="#55575F">the standard, v1.24.2</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   AC [label=<<b>academic</b><br/><font point-size="11" color="#55575F">reports, papers, proofs</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   PR [label=<<b>presentations</b><br/><font point-size="11" color="#55575F">talks, figures</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
   SD [label=<<b>software-design</b><br/><font point-size="11" color="#55575F">design documents</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
@@ -100,7 +100,7 @@ The project has its counterpart there, [ai-augmented-project](https://github.com
 
 - **The standard depends on no extension.** An extension links the standard's principles and shapes at one release,
   pinned by commit in every workflow, and never copies them. The standard may list an extension, never read it
-  ([extending.md](https://github.com/Tewf/reader-ergonomics/blob/0206e6950b4feca4194af419384c217863b7c42e/extending.md)).
+  ([extending.md](https://github.com/Tewf/reader-ergonomics/blob/65e42472e2d4cbfd994c2a86e95a47e5dc7301ca/extending.md)).
 - **One genre per extension**, and only what the genre changes: a principle the standard already holds is linked.
 - **Every member runs the standard's checks in CI**, and its own in `checks/local/`. A check an extension writes is
   proposed to the standard once it holds on the family. Every member then runs it from its next pin raise.
