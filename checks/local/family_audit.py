@@ -6,9 +6,10 @@ Run it by hand or from the weekly workflow:
 
 For each member it clones the default branch (depth 1, no credentials), runs the standard's `checks/run.py` with
 `--tiers program --judge none`, and reads the last lines for the errors, the warnings and the open questions. It
-writes one table (member, errors, warnings, questions) to `--summary` (in CI, the job summary) and to the output,
-and exits 1 only when a member has errors. A member that cannot be cloned or run is reported as "unreachable", and
-is not an error of the member.
+writes one table (member, errors, warnings, questions) to `--summary` (in CI, the job summary) and to the output.
+It exits 1 when a member has errors, when a member's run gives no totals (the standard could not judge it), or when no
+member could be cloned at all; a member that cannot be cloned while others can is a warning. Before issue #1 it
+exited 0 in the last two cases, so an audit that read no member was green.
 
 As a registered check it does nothing unless the environment sets FAMILY_AUDIT=1 and the run is online, because it
 clones the whole family; then each member with errors is one error finding.
@@ -52,6 +53,7 @@ class Result(NamedTuple):
     warnings: int | None
     questions: int | None
     note: str = ""
+    stage: str = ""         # where an unreachable member stopped: "clone" or "run"
 
 
 def parse_output(output: str) -> tuple[int, int, int] | None:
@@ -81,12 +83,13 @@ def audit_member(member: Member, standard: Path, workdir: Path, clone_timeout: i
     if not target.is_dir():
         code, message = run(["git", "clone", "--quiet", "--depth", "1", member.url, str(target)], clone_timeout)
         if code != 0:
-            return Result(member.name, None, None, None, "clone failed: " + message.strip().splitlines()[-1][:120] if message.strip() else "clone failed")
+            note = "clone failed: " + message.strip().splitlines()[-1][:120] if message.strip() else "clone failed"
+            return Result(member.name, None, None, None, note, "clone")
     code, output = run([sys.executable, str(standard / "checks" / "run.py"), str(target),
                         "--tiers", "program", "--judge", "none"], check_timeout)
     parsed = parse_output(output)
     if parsed is None:
-        return Result(member.name, None, None, None, f"run gave no totals (exit {code})")
+        return Result(member.name, None, None, None, f"run gave no totals (exit {code})", "run")
     return Result(member.name, *parsed)
 
 
@@ -101,8 +104,15 @@ def table(results: list[Result]) -> str:
 
 
 def exit_code(results: list[Result]) -> int:
-    """1 only when a member that ran has errors."""
-    return 1 if any(r.errors for r in results) else 0
+    """1 when a member that ran has errors, when a run gave no totals, or when every member's clone failed; 0 else."""
+    if any(r.errors for r in results) or any(r.stage == "run" for r in results):
+        return 1
+    return 1 if results and all(r.stage == "clone" for r in results) else 0
+
+
+def warnings(results: list[Result]) -> list[str]:
+    """One GitHub annotation per member that could not be cloned: a warning, unless every clone failed."""
+    return [f"::warning::{r.member}: {r.note}" for r in results if r.stage == "clone"]
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -125,6 +135,8 @@ def main(argv: list[str] | None = None) -> int:
         results = [audit_member(m, args.standard, workdir) for m in members]
     text = table(results)
     print(text)
+    for line in warnings(results):
+        print(line)
     if args.summary:
         with args.summary.open("a", encoding="utf-8") as handle:
             handle.write("## Family audit\n\n" + text)
@@ -135,12 +147,17 @@ def check(root: Path, config: dict) -> list:
     if os.environ.get("FAMILY_AUDIT") != "1" or not config.get("online"):
         return []
     standard = Path(os.environ.get("FAMILY_AUDIT_STANDARD", ""))
-    findings = []
+    findings, results = [], []
     with tempfile.TemporaryDirectory() as scratch:
         for member in read_members(root / "README.md"):
             result = audit_member(member, standard, Path(scratch))
+            results.append(result)
             if result.errors:
                 findings.append(Finding(NAME, "README.md", member.line, f"{member.name} has {result.errors} error(s) in the program tier"))
+            elif result.stage == "run":
+                findings.append(Finding(NAME, "README.md", member.line, f"{member.name}: {result.note}"))
+    if results and all(r.stage == "clone" for r in results):
+        findings.append(Finding(NAME, "README.md", 1, "no member of the family could be cloned"))
     return findings
 
 

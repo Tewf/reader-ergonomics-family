@@ -5,6 +5,11 @@ A pin move is recorded here, not in decisions/.
 
 ## [Unreleased]
 
+### Fixed
+
+- The family audit no longer passes when it reads no member (issue #1): a run that gives no totals fails it, and so
+  does a run where every member's clone fails; a single clone failure is a warning annotation.
+
 ### Changed
 
 - Pinned reader-ergonomics v1.24.2 (`65e4247`), from v1.22.1 (`0206e69`): fixes that remove false findings in the sentence, term and figure checks, and `[defined_terms] cues`.

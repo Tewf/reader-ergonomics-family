@@ -50,12 +50,23 @@ class Audit(unittest.TestCase):
     def test_parse_without_totals(self):
         self.assertIsNone(family_audit.parse_output("Traceback"))
 
-    def test_exit_code_fails_only_on_errors(self):
+    def test_exit_code_fails_on_errors_and_warns_on_one_clone_failure(self):
         ok = family_audit.Result("a", 0, 3, 1)
-        gone = family_audit.Result("b", None, None, None, "clone failed")
+        gone = family_audit.Result("b", None, None, None, "clone failed", "clone")
         bad = family_audit.Result("c", 2, 0, 0)
         self.assertEqual(family_audit.exit_code([ok, gone]), 0)
+        self.assertEqual(family_audit.warnings([ok, gone]), ["::warning::b: clone failed"])
         self.assertEqual(family_audit.exit_code([ok, bad]), 1)
+
+    def test_two_members_that_cannot_be_read_fail_the_audit(self):
+        # issue #1: with every member unreachable the audit was green
+        down = [family_audit.Result(n, None, None, None, "clone failed", "clone") for n in ("a", "b")]
+        self.assertEqual(family_audit.exit_code(down), 1)
+
+    def test_a_run_without_totals_fails_the_audit(self):
+        ok = family_audit.Result("a", 0, 3, 1)
+        silent = family_audit.Result("b", None, None, None, "run gave no totals (exit 1)", "run")
+        self.assertEqual(family_audit.exit_code([ok, silent]), 1)
 
     def test_table(self):
         text = family_audit.table([family_audit.Result("a", 0, 3, 1), family_audit.Result("b", None, None, None, "x")])
@@ -78,6 +89,18 @@ class Audit(unittest.TestCase):
             member = family_members.Member("m", "Tewf", "file:///nonexistent/repo", "v1", 1)
             result = family_audit.audit_member(member, Path(tmp), Path(tmp) / "w", clone_timeout=20)
             self.assertIsNone(result.errors)
+            self.assertEqual(result.stage, "clone")
+
+    def test_a_standard_that_prints_no_totals_is_a_run_failure(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            (tmp / "std" / "checks").mkdir(parents=True)
+            (tmp / "std" / "checks" / "run.py").write_text("import sys; sys.exit('crashed')\n")
+            (tmp / "work" / "m").mkdir(parents=True)
+            member = family_members.Member("m", "Tewf", "https://github.com/Tewf/m", "v1.0.0", 1)
+            result = family_audit.audit_member(member, tmp / "std", tmp / "work")
+            self.assertEqual(result.stage, "run")
+            self.assertEqual(family_audit.exit_code([result]), 1)
 
     def test_inactive_check_finds_nothing(self):
         self.assertEqual(family_audit.check(Path("."), {"online": True}), [])
